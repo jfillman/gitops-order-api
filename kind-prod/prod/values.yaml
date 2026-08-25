@@ -2,4 +2,10 @@ appName: order-api
 appType: app
 cluster: kind-prod
 envName: prod
-rollout: null
+rollout:
+  image:
+    repository: ghcr.io/jfillman/order-api
+    tag: latest
+  ports:
+    - name: http
+      containerPort: 8080
