@@ -5,7 +5,7 @@ envName: prod
 rollout:
   image:
     repository: ghcr.io/jfillman/order-api
-    tag: latest
+    tag: 0.1.1-2ac90f0
   ports:
     - name: http
       containerPort: 8080
