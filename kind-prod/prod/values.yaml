@@ -9,6 +9,20 @@ rollout:
   ports:
     - name: http
       containerPort: 8080
+  livenessProbe:
+    httpGet:
+      path: /
+      port: 8080
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    timeoutSeconds: 5
+  readinessProbe:
+    httpGet:
+      path: /
+      port: 8080
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    timeoutSeconds: 5
 releaseTracking:
   relayUrl: http://dev.kiac.local:30880/outcome/kind-prod
   cluster: kind-prod
