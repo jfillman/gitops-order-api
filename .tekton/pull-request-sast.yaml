@@ -4,7 +4,7 @@
 # checks whether sast-scan passed at build time via its SLSA provenance attestation -
 # not a re-scan (re-scanning source at a fixed commit would be redundant).
 #
-# No app-order-api-cicd substitution or workspace needed (an order-api substitution now exists, for the platform.io/app label below) - repo-url/revision come
+# No app-order-api-cicd substitution or workspace needed (an order-api substitution now exists, for the hangar.io/app label below) - repo-url/revision come
 # from PaC's template vars, and the check clones/queries in its own scratch space.
 #
 # pr-number feeds this Pipeline's finally block, which posts a PR comment reporting the
@@ -23,7 +23,7 @@ kind: PipelineRun
 metadata:
   generateName: sast-
   labels:
-    platform.io/app: "order-api"
+    hangar.io/app: "order-api"
   annotations:
     # on-cel-expression, not on-event/on-target-branch - PaC ignores those two entirely
     # once a CEL expression is present, so this expression has to carry the whole
