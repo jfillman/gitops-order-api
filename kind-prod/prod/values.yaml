@@ -13,16 +13,16 @@ rollout:
     httpGet:
       path: /
       port: 8080
-    initialDelaySeconds: 5
-    periodSeconds: 10
-    timeoutSeconds: 5
+    initialDelaySeconds: 10
+    periodSeconds: 40
+    timeoutSeconds: 30
   readinessProbe:
     httpGet:
       path: /
       port: 8080
-    initialDelaySeconds: 5
-    periodSeconds: 10
-    timeoutSeconds: 5
+    initialDelaySeconds: 10
+    periodSeconds: 40
+    timeoutSeconds: 30
 releaseTracking:
   relayUrl: http://dev.kiac.local:30880/outcome/kind-prod
   cluster: kind-prod
