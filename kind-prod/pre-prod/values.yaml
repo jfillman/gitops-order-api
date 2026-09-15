@@ -2,24 +2,4 @@ appName: order-api
 appType: app
 cluster: kind-prod
 envName: pre-prod
-rollout:
-  image:
-    repository: ghcr.io/jfillman/order-api
-    tag: 0.1.4-d3c2570
-  ports:
-    - name: http
-      containerPort: 8080
-  livenessProbe:
-    httpGet:
-      path: /
-      port: 8080
-    initialDelaySeconds: 10
-    periodSeconds: 40
-    timeoutSeconds: 30
-  readinessProbe:
-    httpGet:
-      path: /
-      port: 8080
-    initialDelaySeconds: 10
-    periodSeconds: 40
-    timeoutSeconds: 30
+rollout: null
